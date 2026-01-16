@@ -3,59 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Equipo de Fútbol</title>
-    <link rel="stylesheet" href="styles.css">
-</boby>
+    <title>Estadios de Fútbol - Tu Web de Pasión</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
 <body>
-
-    <!-- Encabezado -->
     <header>
-        <h1>Nombre del Club</h1>
-        <nav>
-            <a href="#noticias">Noticias</a> |
-            <a href="#plantilla">Plantilla</a> |
-            <a href="#calendario">Calendario</a> |
-            <a href="#contacto">Contacto</a>
-        </nav>
+        <div class="container">
+            <h1><i class="fas fa-futbol"></i> Estadios de Ensueño</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#estadios">Estadios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Sección de Noticias -->
-    <section id="noticias">
-        <h2>Últimas Noticias</h2>
-        <article>
-            <h3>¡Victoria Importante!</h3>
-            <p>El equipo ha conseguido una victoria crucial este fin de semana... [Leer más]</p>
-        </article>
-        <article>
-            <h3>Entrenamiento de hoy</h3>
-            <p>Sesión intensa bajo las órdenes del entrenador... [Leer más]</p>
-        </article>
-    </section>
-
-    <!-- Sección de Plantilla -->
-    <section id="plantilla">
-        <h2>Nuestra Plantilla</h2>
-        <!-- Aquí irían filas de jugadores con fotos y nombres -->
-        <div class="jugador">
-            <img src="jugador1.jpg" alt="Jugador 1">
-            <p>Nombre del Jugador - Posición</p>
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Descubre los templos del fútbol mundial</h2>
+            <p>Explora los estadios más icónicos, su historia y sus momentos inolvidables.</p>
+            <a href="#estadios" class="btn-primary">Ver Estadios</a>
         </div>
-        <!-- Repetir para más jugadores -->
     </section>
 
-    <!-- Sección de Calendario/Resultados -->
-    <section id="calendario">
-        <h2>Próximos Partidos</h2>
-        <!-- Aquí irían los partidos: Fecha, Rival, Hora -->
-        <p>18/01/2026: vs. Equipo Rival (16:00h)</p>
+    <section id="estadios" class="section-padding">
+        <div class="container">
+            <h2>Nuestros Estadios Destacados</h2>
+            <div class="stadium-grid">
+                <!-- Estadio 1 -->
+                <div class="stadium-card">
+                    <img src="https://via.placeholder.com/400x250?text=Camp+Nou" alt="Camp Nou">
+                    <h3>Camp Nou</h3>
+                    <p>El hogar del FC Barcelona, uno de los más grandes de Europa.</p>
+                    <a href="#" class="btn-secondary">Más Info</a>
+                </div>
+                <!-- Estadio 2 -->
+                <div class="stadium-card">
+                    <img src="https://via.placeholder.com/400x250?text=Santiago+Bernabéu" alt="Santiago Bernabéu">
+                    <h3>Santiago Bernabéu</h3>
+                    <p>El templo del Real Madrid, testigo de innumerables glorias.</p>
+                    <a href="#" class="btn-secondary">Más Info</a>
+                </div>
+                <!-- Estadio 3 -->
+                <div class="stadium-card">
+                    <img src="https://via.placeholder.com/400x250?text=Wembley+Stadium" alt="Wembley">
+                    <h3>Wembley Stadium</h3>
+                    <p>El icónico estadio de Londres, sede de finales históricas.</p>
+                    <a href="#" class="btn-secondary">Más Info</a>
+                </div>
+                <!-- Añade más estadios aquí -->
+            </div>
+        </div>
     </section>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2026 Nombre del Club. Todos los derechos reservados.</p>
-        <p>Síguenos en: [Icono FB] [Icono Twitter]</p>
-    </footer>
+    <section id="galeria" class="section-padding bg-light">
+        <div class="container">
+            <h2>Galería de Pasión</h2>
+            <div class="gallery-grid">
+                <img src="https://via.placeholder.com/300x200?text=Gol+Epico" alt="Gol Epico">
+                <img src="https://via.placeholder.com/300x200?text=Celebracion+Fan" alt="Celebracion Fan">
+                <img src="https://via.placeholder.com/300x200?text=Vista+Aerea" alt="Vista Aerea">
+            </div>
+        </div>
+    </section>
 
-</body>
-</html>
-
+    <footer id="contacto">
+        <div class="container">
+            <p>&copy; 2026 Estadios de Ensue
