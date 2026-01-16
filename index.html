@@ -1,170 +1,44 @@
-/* Variables de Diseño */
-:root {
-    --black: #000000;
-    --white: #ffffff;
-    --grey: #f5f5f5;
-    --nike-font: 'Archivo Black', sans-serif;
-    --body-font: 'Inter', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTBALL HUB | EL TEMPLO</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Usamos una fuente moderna de Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <!-- Animación de entrada -->
+    <div class="entrance-animation"></div>
 
-body {
-    font-family: var(--body-font);
-    background-color: var(--white);
-    overflow-x: hidden;
-}
+    <header class="hero" style="background-image: url('https://images.unsplash.com');">
+        <div class="hero-overlay">
+            <h1>Bienvenidos Futboleros</h1>
+            <p>Siente la pasión desde el centro del campo. Noticias y más.</p>
+            <a href="#noticias" class="cta-button">Ver Novedades</a>
+        </div>
+    </header>
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: var(--white);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    <main class="container">
+        <section id="noticias">
+            <h2>Últimas Noticias</h2>
+            <article class="card">
+                <img src="https://images.unsplash.com" alt="Partido nocturno en estadio">
+                <h3>Gran Victoria del Equipo</h3>
+                <p>Anoche se vivió un partido increíble, ¡la afición vibró!</p>
+            </article>
+            <article class="card">
+                <img src="https://images.unsplash.com" alt="Estadio lleno de gente">
+                <h3>Próximo Partido Clave</h3>
+                <p>Prepárate para el próximo encuentro. ¡Necesitamos tu apoyo!</p>
+            </article>
+        </section>
+    </main>
 
-.logo {
-    font-family: var(--nike-font);
-    font-size: 24px;
-    letter-spacing: -1px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--black);
-    font-weight: 700;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #777;
-}
-
-/* Hero Section */
-.hero {
-    height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), 
-                url('https://images.unsplash.com');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    padding: 80px;
-    color: var(--white);
-}
-
-.hero-content {
-    max-width: 800px;
-}
-
-.main-title {
-    font-family: var(--nike-font);
-    font-size: clamp(3rem, 10vw, 8rem);
-    line-height: 0.9;
-    margin-bottom: 20px;
-}
-
-.subtitle {
-    font-size: 18px;
-    margin-bottom: 30px;
-    max-width: 500px;
-    font-weight: 400;
-}
-
-/* Botones estilo Nike */
-.hero-btns {
-    display: flex;
-    gap: 15px;
-}
-
-.btn-black, .btn-white {
-    padding: 12px 28px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.btn-black {
-    background: var(--black);
-    color: var(--white);
-}
-
-.btn-white {
-    background: var(--white);
-    color: var(--black);
-}
-
-.btn-black:hover { background: #333; }
-.btn-white:hover { background: #ddd; }
-
-/* Grid de Novedades */
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 10px;
-    background-color: var(--white);
-}
-
-.news-item {
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    padding: 30px;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.item-1 { background-image: url('https://images.unsplash.com'); }
-.item-2 { background-image: url('https://images.unsplash.com'); }
-.item-3 { background-image: url('https://images.unsplash.com'); }
-
-.news-item .overlay {
-    color: var(--white);
-    z-index: 2;
-}
-
-.news-item h3 {
-    font-family: var(--nike-font);
-    font-size: 24px;
-}
-
-.news-item::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    transition: 0.3s;
-}
-
-.news-item:hover::after {
-    background: rgba(0,0,0,0.2);
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .news-grid { grid-template-columns: 1fr; }
-    .navbar { padding: 20px; }
-    .nav-links { display: none; }
-    .hero { padding: 40px 20px; }
-}
+    <footer>
+        <p>&copy; 2026 Comunidad Futbolera.</p>
+    </footer>
+</body>
+</html>
