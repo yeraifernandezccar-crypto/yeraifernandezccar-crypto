@@ -3,74 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadios de Fútbol - Tu Web de Pasión</title>
+    <title>Página de Futboleros - El Templo</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Enlaza a Google Fonts si quieres usar una tipografía específica, por ejemplo, 'Oswald' -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1><i class="fas fa-futbol"></i> Estadios de Ensueño</h1>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#estadios">Estadios</a></li>
-                    <li><a href="#galeria">Galería</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>Bienvenidos Futboleros</h1>
+            <p>Tu punto de encuentro para noticias, partidos y pasión por el fútbol.</p>
+            <a href="#noticias" class="cta-button">Ver Noticias Recientes</a>
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="container">
-            <h2>Descubre los templos del fútbol mundial</h2>
-            <p>Explora los estadios más icónicos, su historia y sus momentos inolvidables.</p>
-            <a href="#estadios" class="btn-primary">Ver Estadios</a>
-        </div>
-    </section>
+    <main class="container">
+        <section id="noticias">
+            <h2>Últimas Noticias</h2>
+            <article class="card">
+                <h3>Gran Victoria del Equipo</h3>
+                <p>Anoche se vivió un partido increíble en el estadio, con un resultado que nos acerca a la cima de la tabla. ¡La afición vibró!</p>
+            </article>
+            <article class="card">
+                <h3>Próximo Partido Clave</h3>
+                <p>Prepárate para el próximo encuentro. ¡Necesitamos tu apoyo en las gradas!</p>
+            </article>
+        </section>
 
-    <section id="estadios" class="section-padding">
-        <div class="container">
-            <h2>Nuestros Estadios Destacados</h2>
-            <div class="stadium-grid">
-                <!-- Estadio 1 -->
-                <div class="stadium-card">
-                    <img src="https://via.placeholder.com/400x250?text=Camp+Nou" alt="Camp Nou">
-                    <h3>Camp Nou</h3>
-                    <p>El hogar del FC Barcelona, uno de los más grandes de Europa.</p>
-                    <a href="#" class="btn-secondary">Más Info</a>
-                </div>
-                <!-- Estadio 2 -->
-                <div class="stadium-card">
-                    <img src="https://via.placeholder.com/400x250?text=Santiago+Bernabéu" alt="Santiago Bernabéu">
-                    <h3>Santiago Bernabéu</h3>
-                    <p>El templo del Real Madrid, testigo de innumerables glorias.</p>
-                    <a href="#" class="btn-secondary">Más Info</a>
-                </div>
-                <!-- Estadio 3 -->
-                <div class="stadium-card">
-                    <img src="https://via.placeholder.com/400x250?text=Wembley+Stadium" alt="Wembley">
-                    <h3>Wembley Stadium</h3>
-                    <p>El icónico estadio de Londres, sede de finales históricas.</p>
-                    <a href="#" class="btn-secondary">Más Info</a>
-                </div>
-                <!-- Añade más estadios aquí -->
-            </div>
-        </div>
-    </section>
+        <section id="partidos">
+            <h2>Calendario y Resultados</h2>
+            <ul class="match-list">
+                <li>Equipo A vs. **Equipo B** - **Fecha y Resultado**</li>
+                <li>**Equipo C** vs. Equipo D - **Próxima Fecha y Hora**</li>
+            </ul>
+        </section>
+    </main>
 
-    <section id="galeria" class="section-padding bg-light">
-        <div class="container">
-            <h2>Galería de Pasión</h2>
-            <div class="gallery-grid">
-                <img src="https://via.placeholder.com/300x200?text=Gol+Epico" alt="Gol Epico">
-                <img src="https://via.placeholder.com/300x200?text=Celebracion+Fan" alt="Celebracion Fan">
-                <img src="https://via.placeholder.com/300x200?text=Vista+Aerea" alt="Vista Aerea">
-            </div>
-        </div>
-    </section>
-
-    <footer id="contacto">
-        <div class="container">
-            <p>&copy; 2026 Estadios de Ensue
+    <footer>
+        <p>&copy; 2026 Comunidad Futbolera. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
