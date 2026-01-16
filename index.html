@@ -1,165 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
- <head>
-
-      /* Variables de Colores Vivos */
-:root {
-    --primary-color: #004d98; /* Azul intenso */
-    --secondary-color: #fdb927; /* Amarillo vibrante */
-    --text-color: #333;
-    --background-color: #f4f4f4;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ <style>
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Animación de entrada al cargar la página */
-.entrance-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    z-index: 9999;
-    animation: fadeOut 1.5s forwards;
-    animation-delay: 0.5s; /* Pequeño retraso para que sea visible */
-}
-
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; visibility: hidden; }
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 2rem;
-}
-
-/* Hero Section con fondo de estadio */
-.hero {
-    height: 70vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+header {
+    background-color: #333;
     color: white;
-    /* Animación sutil de zoom al cargar */
-    animation: zoomIn 2s forwards;
+    padding: 1rem 0;
+    text-align: center;
 }
 
-@keyframes zoomIn {
-    from { transform: scale(1.1); }
-    to { transform: scale(1); }
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.hero-overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Superposición oscura */
-    padding: 2rem;
-    border-radius: 10px;
+nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 0.75rem 1.5rem;
+nav ul li a {
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
 }
 
-.cta-button:hover {
-    background-color: #ffc84a;
+main {
+    padding: 2rem;
 }
 
-/* Estilos de secciones y tarjetas con imágenes */
 section {
-    padding: 2rem 0;
-}
-
-.card {
+    margin-bottom: 2rem;
     background: white;
     padding: 1.5rem;
-    margin-bottom: 1rem;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: flex;
-    gap: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.card img {
-    width: 150px;
-    height: 100px;
-    object-fit: cover;
+.estadio-card {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.estadio-card img {
+    max-width: 100%;
+    height: auto;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 footer {
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 1rem 0;
-    background-color: var(--primary-color);
-    color: white;
-    margin-top: 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
+  
+ </style>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOOTBALL HUB | EL TEMPLO</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Usamos una fuente moderna de Google Fonts -->
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <title>Estadios de Fútbol</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo CSS -->
 </head>
 <body>
-
-    <!-- Animación de entrada -->
-    <div class="entrance-animation"></div>
-
-    <header class="hero" style="background-image: url('https://images.unsplash.com');">
-        <div class="hero-overlay">
-            <h1>Bienvenidos Futboleros</h1>
-            <p>Siente la pasión desde el centro del campo. Noticias y más.</p>
-            <a href="#noticias" class="cta-button">Ver Novedades</a>
-        </div>
+    <header>
+        <h1>Estadios Emblemáticos</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#estadios">Estadios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section id="noticias">
-            <h2>Últimas Noticias</h2>
-            <article class="card">
-                <img src="https://images.unsplash.com" alt="Partido nocturno en estadio">
-                <h3>Gran Victoria del Equipo</h3>
-                <p>Anoche se vivió un partido increíble, ¡la afición vibró!</p>
-            </article>
-            <article class="card">
-                <img src="https://images.unsplash.com" alt="Estadio lleno de gente">
-                <h3>Próximo Partido Clave</h3>
-                <p>Prepárate para el próximo encuentro. ¡Necesitamos tu apoyo!</p>
-            </article>
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a la web de estadios</h2>
+            <p>Explora los recintos más icónicos del fútbol mundial.</p>
+        </section>
+
+        <section id="estadios">
+            <h2>Nuestros Estadios</h2>
+            <div class="estadio-card">
+                <h3>Estadio 1: Nombre del Estadio</h3>
+                <p><strong>Ubicación:</strong> Ciudad, País</p>
+                <p><strong>Capacidad:</strong> XX,XXX espectadores</p>
+                <img src="https://via.placeholder.com" alt="Imagen del estadio 1">
+            </div>
+            <div class="estadio-card">
+                <h3>Estadio 2: Nombre del Estadio</h3>
+                <p><strong>Ubicación:</strong> Ciudad, País</p>
+                <p><strong>Capacidad:</strong> XX,XXX espectadores</p>
+                <img src="https://via.placeholder.com" alt="Imagen del estadio 2">
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Comunidad Futbolera.</p>
+        <p>&copy; 2025 Estadios de Fútbol</p>
     </footer>
 </body>
 </html>
