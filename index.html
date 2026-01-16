@@ -3,44 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Futboleros - El Templo</title>
+    <title>FOOTBALL HUB | EL TEMPLO</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Enlaza a Google Fonts si quieres usar una tipografía específica, por ejemplo, 'Oswald' -->
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Barra de navegación estilo Nike -->
+    <nav class="navbar">
+        <div class="logo">EL TEMPLO</div>
+        <ul class="nav-links">
+            <li><a href="#">CALENDARIO</a></li>
+            <li><a href="#">EQUIPACIONES</a></li>
+            <li><a href="#">ENTRADAS</a></li>
+            <li><a href="#">COMUNIDAD</a></li>
+        </ul>
+        <div class="nav-icons">
+            <span>BUSCAR</span>
+            <span class="cart-icon">🛒</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section con fondo de estadio -->
     <header class="hero">
-        <div class="hero-overlay">
-            <h1>Bienvenidos Futboleros</h1>
-            <p>Tu punto de encuentro para noticias, partidos y pasión por el fútbol.</p>
-            <a href="#noticias" class="cta-button">Ver Noticias Recientes</a>
+        <div class="hero-content">
+            <h1 class="main-title">DOMINA EL<br>TERRENO</h1>
+            <p class="subtitle">Siente la pasión desde el centro del campo. Las nuevas equipaciones y entradas para la temporada 2026 ya están disponibles.</p>
+            <div class="hero-btns">
+                <a href="#" class="btn-black">COMPRAR AHORA</a>
+                <a href="#" class="btn-white">VER PARTIDOS</a>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section id="noticias">
-            <h2>Últimas Noticias</h2>
-            <article class="card">
-                <h3>Gran Victoria del Equipo</h3>
-                <p>Anoche se vivió un partido increíble en el estadio, con un resultado que nos acerca a la cima de la tabla. ¡La afición vibró!</p>
-            </article>
-            <article class="card">
-                <h3>Próximo Partido Clave</h3>
-                <p>Prepárate para el próximo encuentro. ¡Necesitamos tu apoyo en las gradas!</p>
-            </article>
-        </section>
+    <!-- Sección de Novedades (Grid tipo Nike) -->
+    <section class="news-grid">
+        <div class="news-item item-1">
+            <div class="overlay">
+                <h3>EL DERBI DE LA CIUDAD</h3>
+                <p>Próximo Sábado - 21:00h</p>
+            </div>
+        </div>
+        <div class="news-item item-2">
+            <div class="overlay">
+                <h3>NUEVA PIEL</h3>
+                <p>Equipación Local 2026</p>
+            </div>
+        </div>
+        <div class="news-item item-3">
+            <div class="overlay">
+                <h3>TOUR DEL ESTADIO</h3>
+                <p>Reserva tu visita</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="partidos">
-            <h2>Calendario y Resultados</h2>
-            <ul class="match-list">
-                <li>Equipo A vs. **Equipo B** - **Fecha y Resultado**</li>
-                <li>**Equipo C** vs. Equipo D - **Próxima Fecha y Hora**</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Comunidad Futbolera. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>
