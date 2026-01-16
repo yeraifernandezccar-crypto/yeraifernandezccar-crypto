@@ -2,69 +2,139 @@
 <html lang="es">
  <style>
 
+/* Paleta de colores: Negro, Blanco y Rojo de acento */
+:root {
+    --color-primary: #000;
+    --color-secondary: #fff;
+    --color-accent: #ff0000; /* Un rojo vibrante */
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+
+/* Configuración de la imagen de fondo */
+.main-container {
+    background-image: url('estadio-fondo.jpg'); /* Asegúrate de tener esta imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Superposición oscura para que el texto blanco sea legible */
+.main-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Opacidad del 70% */
+    z-index: 0;
+}
+
+/* Asegura que el contenido esté por encima de la superposición */
+header, main, footer {
+    position: relative;
+    z-index: 1;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900; /* Extra bold */
+    color: var(--color-secondary);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin-left: 2rem;
 }
 
 nav ul li a {
-    color: white;
+    color: var(--color-secondary);
     text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-accent);
 }
 
 main {
-    padding: 2rem;
+    padding: 4rem 5%;
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
 }
 
-section {
-    margin-bottom: 2rem;
-    background: white;
-    padding: 1.5rem;
+section#inicio h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+/* Estilo para el botón de llamada a la acción (CTA) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e60000;
+}
+
+section#estadios {
+    margin-top: 4rem;
+    background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente para la sección de estadios */
+    padding: 2rem;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section#estadios h2 {
+    color: var(--color-accent);
 }
 
 .estadio-card {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-}
-
-.estadio-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
 }
 
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.5);
 }
 
   
@@ -72,46 +142,48 @@ footer {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadios de Fútbol</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo CSS -->
+    <title>Estadios de Fútbol - Estilo Nike</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Enlace a una fuente moderna similar a la de Nike, como Montserrat -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Estadios Emblemáticos</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#estadios">Estadios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="main-container">
+        <header>
+            <div class="logo">Estadios **Nike**</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#estadios">Estadios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section id="inicio">
-            <h2>Bienvenido a la web de estadios</h2>
-            <p>Explora los recintos más icónicos del fútbol mundial.</p>
-        </section>
+        <main>
+            <section id="inicio">
+                <h2>Explora los recintos más icónicos del fútbol mundial.</h2>
+                <a href="#estadios" class="cta-button">Ver Estadios</a>
+            </section>
 
-        <section id="estadios">
-            <h2>Nuestros Estadios</h2>
-            <div class="estadio-card">
-                <h3>Estadio 1: Nombre del Estadio</h3>
-                <p><strong>Ubicación:</strong> Ciudad, País</p>
-                <p><strong>Capacidad:</strong> XX,XXX espectadores</p>
-                <img src="https://via.placeholder.com" alt="Imagen del estadio 1">
-            </div>
-            <div class="estadio-card">
-                <h3>Estadio 2: Nombre del Estadio</h3>
-                <p><strong>Ubicación:</strong> Ciudad, País</p>
-                <p><strong>Capacidad:</strong> XX,XXX espectadores</p>
-                <img src="https://via.placeholder.com" alt="Imagen del estadio 2">
-            </div>
-        </section>
-    </main>
+            <section id="estadios">
+                <h2>Nuestros Estadios</h2>
+                <div class="estadio-card">
+                    <h3>Estadio 1: Nombre del Estadio</h3>
+                    <p><strong>Ubicación:</strong> Ciudad, País</p>
+                    <p><strong>Capacidad:</strong> XX,XXX espectadores</p>
+                </div>
+                <div class="estadio-card">
+                    <h3>Estadio 2: Nombre del Estadio</h3>
+                    <p><strong>Ubicación:</strong> Ciudad, País</p>
+                    <p><strong>Capacidad:</strong> XX,XXX espectadores</p>
+                </div>
+            </section>
+        </main>
 
-    <footer>
-        <p>&copy; 2025 Estadios de Fútbol</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Estadios de Fútbol. Inspirado por Nike.</p>
+        </footer>
+    </div>
 </body>
 </html>
