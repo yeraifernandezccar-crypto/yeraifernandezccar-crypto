@@ -1,253 +1,206 @@
 <!DOCTYPE html>
 <html lang="es">
- <style>
-
-:root {
-    --bg-dark: #0a0a0a;
-    --text-main: #ffffff;
-    --text-dim: #a0a0a0;
-    --accent: #ffffff; /* Color puro para elegancia */
-    --glass: rgba(255, 255, 255, 0.05);
-    --blur: blur(15px);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Fondo con imagen de estadio profesional */
-.hero-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(10,10,10,0.4), rgba(10,10,10,1)),
-                url('https://images.unsplash.com');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
-
-/* Navegación Minimalista */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 8%;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo {
-    font-weight: 900;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-}
-
-.logo span {
-    font-weight: 300;
-    color: var(--text-dim);
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 40px;
-}
-
-nav ul li a {
-    color: var(--text-main);
-    text-decoration: none;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.7;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    opacity: 1;
-}
-
-/* Sección Principal */
-.content {
-    padding: 100px 8%;
-}
-
-.hero-text {
-    max-width: 700px;
-    margin-bottom: 100px;
-}
-
-.subtitle {
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    display: block;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: clamp(3rem, 8vw, 5rem);
-    font-weight: 900;
-    line-height: 1;
-    margin-bottom: 30px;
-    letter-spacing: -2px;
-}
-
-p {
-    font-size: 1.1rem;
-    color: var(--text-dim);
-    margin-bottom: 40px;
-}
-
-/* Botones Profesionales */
-.btn-primary {
-    background: var(--accent);
-    color: black;
-    padding: 15px 35px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    border-radius: 2px;
-    margin-right: 20px;
-    transition: 0.3s;
-}
-
-.btn-secondary {
-    border: 1px solid rgba(255,255,255,0.3);
-    color: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.btn-secondary:hover {
-    background: white;
-    color: black;
-}
-
-/* Grid de Estadios */
-.grid-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: var(--glass);
-    backdrop-filter: var(--blur);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 4px;
-    overflow: hidden;
-    transition: transform 0.4s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card-image {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-}
-
-.card-info {
-    padding: 20px;
-}
-
-.card-info h3 {
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-.card-info p {
-    font-size: 0.8rem;
-    margin: 0;
-}
-
-footer {
-    padding: 50px 8%;
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-  
- </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stadium Archive | Arquitectura Deportiva</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Fuente tipográfica profesional: Inter -->
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <title>Guía de Estadios de Fútbol para Visitar</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: #000; }
+        .stadium { margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .stadium h3 { margin-top: 0; }
+        .stadium ul { list-style-type: none; padding: 0; }
+        .stadium ul li { margin-bottom: 5px; }
+        .stadium a { color: #007BFF; text-decoration: none; }
+        .stadium a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
-    <!-- Capa de fondo fija -->
-    <div class="hero-background"></div>
+    <div class="container">
+        <h1>Guía de Estadios de Fútbol para Visitar</h1>
+        <p>Explora los estadios más emblemáticos del mundo, con detalles sobre su ubicación, capacidad e información de tours.</p>
 
-    <header class="navbar">
-        <div class="logo">STADIUM<span>ARCHIVE</span></div>
-        <nav>
+        <h2>Europa</h2>
+
+        <div class="stadium">
+            <h3>Spotify Camp Nou (**FC Barcelona**)</h3>
             <ul>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li>**Ubicación**: Les Corts, Barcelona, España.</li>
+                <li>**Capacidad**: **99.354** espectadores.</li>
+                <li>**Información**: Actualmente en remodelación, pero el museo y las experiencias virtuales siguen abiertas.</li>
+                <li>**Web**: Visita el [sitio web oficial del FC Barcelona](https://www.fcbarcelona.es) para tours.</li>
             </ul>
-        </nav>
-    </header>
+        </div>
 
-    <main class="content">
-        <section class="hero-text">
-            <span class="subtitle">Explora la excelencia</span>
-            <h1>Templos del <br>Fútbol Moderno</h1>
-            <p>Un recorrido visual por las obras maestras de la ingeniería y la arquitectura deportiva mundial.</p>
-            <div class="actions">
-                <a href="#proyectos" class="btn-primary">Explorar Archivo</a>
-                <a href="#" class="btn-secondary">Saber más</a>
-            </div>
-        </section>
+        <div class="stadium">
+            <h3>Estadio Santiago Bernabéu (**Real Madrid**)</h3>
+            <ul>
+                <li>**Ubicación**: Chamartín, Madrid, España.</li>
+                <li>**Capacidad**: Alrededor de **80.000** espectadores.</li>
+                <li>**Información**: Recientemente renovado, ofrece el popular **Tour Bernabéu**.</li>
+                <li>**Web**: Más información en el [sitio web oficial del Real Madrid](https://bernabeu.realmadrid.com).</li>
+            </ul>
+        </div>
 
-        <section id="proyectos" class="grid-section">
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://images.unsplash.com');"></div>
-                <div class="card-info">
-                    <h3>Allianz Arena</h3>
-                    <p>Múnich, Alemania</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://images.unsplash.com');"></div>
-                <div class="card-info">
-                    <h3>Wembley Stadium</h3>
-                    <p>Londres, Inglaterra</p>
-                </div>
-            </div>
-        </section>
-    </main>
+        <div class="stadium">
+            <h3>Old Trafford (**Manchester United**)</h3>
+            <ul>
+                <li>**Ubicación**: Old Trafford, Greater Manchester, Inglaterra.</li>
+                <li>**Capacidad**: **74.310** espectadores.</li>
+                <li>**Información**: Conocido como el "Teatro de los Sueños".</li>
+            </ul>
+        </div>
 
-    <footer class="minimal-footer">
-        <p>&copy; 2026 Stadium Archive. Todos los derechos reservados.</p>
-    </footer>
+        <div class="stadium">
+            <h3>Anfield (**Liverpool**)</h3>
+            <ul>
+                <li>**Ubicación**: Anfield Road, Liverpool, Inglaterra.</li>
+                <li>**Capacidad**: **61.276** espectadores.</li>
+                <li>**Información**: Famoso por su atmósfera y la grada "The Kop".</li>
+            </ul>
+        </div>
+        
+        <div class="stadium">
+            <h3>Stamford Bridge (**Chelsea**)</h3>
+            <ul>
+                <li>**Ubicación**: Fulham Road, Londres, Inglaterra.</li>
+                <li>**Capacidad**: Aproximadamente **40.341** espectadores.</li>
+                <li>**Web**: Reserva entradas en el [sitio web oficial del Chelsea FC](https://www.chelseafc.com).</li>
+            </ul>
+        </div>
+
+        <div class="stadium">
+            <h3>Parc des Princes (**Paris Saint-Germain**)</h3>
+            <ul>
+                <li>**Ubicación**: 16º Distrito, París, Francia.</li>
+                <li>**Capacidad**: **47.929** localidades.</li>
+            </ul>
+        </div>
+
+        <div class="stadium">
+            <h3>Stade Sébastien Charléty (**Paris FC**)</h3>
+            <ul>
+                <li>**Ubicación**: 13º Distrito, París, Francia.</li>
+                <li>**Capacidad**: Aproximadamente **20.000** espectadores.</li>
+                <li>**Web**: Consulta el [sitio web oficial del Paris FC](https://parisfc.fr) para más detalles.</li>
+            </ul>
+        </div>
+
+        <div class="stadium">
+            <h3>San Siro (Stadio Giuseppe Meazza) (**Inter** & **Milan**)</h3>
+            <ul>
+                <li>**Ubicación**: Piazzale Angelo Moratti, Milán, Italia.</li>
+                <li>**Capacidad**: Aproximadamente **80.018** espectadores.</li>
+                <li>**Información**: Estadio compartido por los dos grandes rivales de Milán.</li>
+            </ul>
+        </div>
+
+        <div class="stadium">
+            <h3>Juventus Stadium (Allianz Stadium) (**Juventus**)</h3>
+            <ul>
+                <li>**Ubicación**: Corso Gaetano Scirea, Turín, Italia.</li>
+                <li>**Capacidad**: Aproximadamente **41.507** espectadores.</li>
+                <li>**Información**: Uno de los estadios más modernos de Italia, propiedad del club.</li>
+            </ul>
+        </div>
+
+        <div class="stadium">
+            <h3>Estádio da Luz (**Benfica**)</h3>
+            <ul>
+                <li>**Ubicación**: Av. Eusébio da Silva Ferreira, Lisboa, Portugal.</li>
+                <li>**Capacidad**: Aproximadamente **65.000** espectadores.</li>
+                <li>**Información**: El estadio más grande de Portugal.</li>
+            </ul>
+        </div>
+
+        <div class="stadium">
+            <h3>Estádio José Alvalade (**Sporting CP**)</h3>
+            <ul>
+                <li>**Ubicación**: R. Prof. Fernando da Fonseca, Lisboa, Portugal.</li>
+                <li>**Capacidad**: Aproximadamente **50.095** espectadores.</li>
+            </ul>
+        </div>
+
+        <div class="stadium">
+            <h3>Allianz Arena (**Bayern Múnich**)</h3>
+            <ul>
+                <li>**Ubicación**: Franz-Beckenbauer-Platz 5, Múnich, Alemania.</li>
+                <li>**Capacidad**: **75.000** espectadores (para partidos domésticos).</li>
+                <li>**Información**: Famoso por su fachada luminosa que cambia de color y el museo del club.</li>
+                <li>**Horario Tours**: Generalmente de 10:00 a 18:00, sujeto a cambios en días de partido.</li>
+                <li>**Web**: Visita el [sitio web oficial del Allianz Arena](https://allianz-arena.com/de).</li>
+            </ul>
+        </div>
+
+        <h2>América del Sur</h2>
+
+        <div class="stadium">
+            <h3>Estadio Maracaná (Estadio Jornalista Mário Filho)</h3>
+            <ul>
+                <li>**Ubicación**: Av. Rei Pelé, Río de Janeiro, Brasil.</li>
+                <li>**Capacidad**: Mundialmente conocido, sede de dos finales de la Copa del Mundo.</li>
+                <li>**Información**: El tour es muy popular y permite acceder al campo y vestuarios.</li>
+                <li>**Horario Tours**: Todos los días de 9:00 a 16:30.</li>
+                <li>**Web**: Compra entradas en el [sitio web oficial del Tour Maracanã](https://www.tourmaracana.com.br/).</li>
+            </ul>
+        </div>
+
+        <div class="stadium">
+            <h3>Estadio Monumental Banco Pichincha (**Barcelona SC**)</h3>
+            <ul>
+                <li>**Ubicación**: Av. Barcelona, Guayaquil, Ecuador.</li>
+                <li>**Capacidad**: El estadio más grande de Ecuador.</li>
+                <li>**Información**: El "Tour Monumental" ofrece un recorrido guiado de 16 puntos, incluyendo el palco presidencial y los vestuarios.</li>
+                <li>**Costo Tour**: $30 USD para público regular.</li>
+                <li>**Web**: Más detalles en el [sitio web oficial del Barcelona SC](https://www.barcelonasc.com.ec/tour-monumental/).</li>
+            </ul>
+        </div>
+
+        <div class="stadium">
+            <h3>Estadio Víctor Agustín Ugarte (**Real Potosí**)</h3>
+            <ul>
+                <li>**Ubicación**: Potosí, Bolivia.</li>
+                <li>**Capacidad**: Aproximadamente **30.000** espectadores.</li>
+                <li>**Información**: Notable por ser uno de los estadios profesionales a mayor altitud del mundo.</li>
+            </ul>
+        </div>
+
+        <h2>África</h2>
+
+        <div class="stadium">
+            <h3>Cape Town Stadium (DHL Stadium)</h3>
+            <ul>
+                <li>**Ubicación**: Fritz Sonnenberg Road, Green Point, Ciudad del Cabo, Sudáfrica.</li>
+                <li>**Información**: Sede de la Copa Mundial de la FIFA 2010 y utilizado por clubes locales como el Cape Town Spurs.</li>
+                <li>**Visitas**: Puedes explorarlo mediante tours en bicicleta por la ciudad o tours privados que incluyen acceso VIP y vestuarios.</li>
+                <li>**Web**: Consulta el [sitio web oficial del DHL Stadium](https://dhlstadium.co.za/stadium/tours) para tours.</li>
+            </ul>
+        </div>
+
+        <h2>Más Ejemplos Internacionales</h2>
+        <div class="stadium">
+            <h3>Estadio Azteca</h3>
+            <ul>
+                <li>**Ubicación**: Ciudad de México, México.</li>
+                <li>**Información**: Uno de los estadios más icónicos del fútbol mundial, sede de dos finales de la Copa del Mundo (1970 y 1986).</li>
+            </ul>
+        </div>
+        <div class="stadium">
+            <h3>La Bombonera (Estadio Alberto J. Armando)</h3>
+            <ul>
+                <li>**Ubicación**: Buenos Aires, Argentina.</li>
+                <li>**Información**: Hogar de Boca Juniors, famoso por su diseño único y su ambiente vibrante.</li>
+            </ul>
+        </div>
+        <div class="stadium">
+            <h3>Wembley Stadium</h3>
+            <ul>
+                <li>**Ubicación**: Londres, Inglaterra.</li>
+                <li>**Información**: El estadio nacional de Inglaterra, conocido por su icónico arco.</li>
+            </ul>
+        </div>
+
+    </div>
 </body>
 </html>
