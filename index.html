@@ -6,147 +6,57 @@
 <title>Los Mejores Estadios del Mundo</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
+body{background:#0b0b0b;color:#fff;}
 
-body{
-background:#0b0b0b;
-color:#fff;
-}
-
-/* HERO ORIGINAL */
 .hero{
 height:100vh;
 background:
 linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
 url("https://images.unsplash.com/photo-1518091043644-c1d4457512c6")
 center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+display:flex;align-items:center;justify-content:center;text-align:center;
 }
 
-.hero h1{
-font-size:3.5rem;
-margin-bottom:20px;
-color:#e10600;
-}
-
-.hero p{
-font-size:1.3rem;
-margin-bottom:30px;
-}
+.hero h1{font-size:3.5rem;margin-bottom:20px;color:#e10600;}
+.hero p{font-size:1.3rem;margin-bottom:30px;}
 
 .btn{
-padding:15px 30px;
-background:#e10600;
-color:white;
-text-decoration:none;
-font-weight:bold;
-border-radius:8px;
-transition:0.3s;
+padding:15px 30px;background:#e10600;color:white;
+text-decoration:none;font-weight:bold;border-radius:8px;transition:0.3s;
 }
+.btn:hover{background:#ff1a1a;transform:scale(1.05);}
 
-.btn:hover{
-background:#ff1a1a;
-transform:scale(1.05);
-}
+section{padding:80px 8%;}
+h2{margin:60px 0 25px;border-left:5px solid #e10600;padding-left:15px;font-size:2rem;}
 
-section{
-padding:80px 8%;
-}
-
-h2{
-margin:60px 0 25px;
-border-left:5px solid #e10600;
-padding-left:15px;
-font-size:2rem;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
 
 .card{
-background:#151515;
-border-radius:15px;
-overflow:hidden;
-transition:0.4s;
-cursor:pointer;
+background:#151515;border-radius:15px;overflow:hidden;
+transition:0.4s;cursor:pointer;
 box-shadow:0 5px 15px rgba(0,0,0,0.5);
 }
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 30px rgba(225,6,0,0.4);
-}
-
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
-}
-
-.card-content{
-padding:20px;
-}
-
-.card h3{
-color:#e10600;
-margin-bottom:10px;
-}
-
-.card p{
-color:#ccc;
-font-size:0.9rem;
-}
+.card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(225,6,0,0.4);}
+.card img{width:100%;height:200px;object-fit:cover;}
+.card-content{padding:20px;}
+.card h3{color:#e10600;margin-bottom:10px;}
+.card p{color:#ccc;font-size:0.9rem;}
 
 .modal{
-display:none;
-position:fixed;
-inset:0;
+display:none;position:fixed;inset:0;
 background:rgba(0,0,0,0.85);
-justify-content:center;
-align-items:center;
-z-index:1000;
-padding:20px;
+justify-content:center;align-items:center;
+z-index:1000;padding:20px;
 }
-
 .modal-content{
-background:#111;
-padding:30px;
-border-radius:15px;
-max-width:600px;
-width:100%;
+background:#111;padding:30px;border-radius:15px;
+max-width:600px;width:100%;position:relative;
 }
+.modal-content h2{color:#e10600;margin-bottom:15px;}
+.close{position:absolute;right:20px;top:15px;font-size:30px;cursor:pointer;}
 
-.modal-content h2{
-color:#e10600;
-margin-bottom:15px;
-}
-
-.close{
-position:absolute;
-right:30px;
-top:20px;
-font-size:30px;
-cursor:pointer;
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:#000;
-margin-top:60px;
-color:#777;
-}
+footer{text-align:center;padding:30px;background:#000;margin-top:60px;color:#777;}
 </style>
 </head>
 
@@ -162,241 +72,118 @@ color:#777;
 
 <section id="estadios">
 
-<!-- ================= EUROPA ================= -->
 <h2>Europa</h2>
 <div class="grid">
 
-<!-- Camp Nou -->
 <div class="card" data-title="Spotify Camp Nou"
-data-info="Barcelona | 99.354 espectadores | FC Barcelona | 1957">
+data-info="Barcelona | 99.354 | 1957 | Aquí Messi se convirtió en leyenda y el Barça vivió su era dorada con Guardiola (2009-2011).">
 <img src="https://cms-images.acc.indazn.com/di/library/DAZN_News/16/e9/camp-nou-render_nsmb7f9fku4519vutsao5b34d.jpg?t=152113308&quality=80&w=750&h=422">
-<div class="card-content">
-<h3>Spotify Camp Nou</h3>
-<p>Barcelona, España</p>
-</div>
+<div class="card-content"><h3>Spotify Camp Nou</h3><p>Barcelona</p></div>
 </div>
 
-<!-- Bernabeu -->
 <div class="card" data-title="Santiago Bernabéu"
-data-info="Madrid | 85.000 | Real Madrid | 1947 | Remodelación futurista">
-<img src="https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/madrid/santiago-bernabeu_c-david-benito-shutterstock-s2468268069.jpg">
-<div class="card-content">
-<h3>Santiago Bernabéu</h3>
-<p>Madrid, España</p>
-</div>
+data-info="Madrid | 1947 | Escenario de las 14 Champions del Real Madrid y de las míticas remontadas europeas.">
+<img src=https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/madrid/santiago-bernabeu_c-david-benito-shutterstock-s2468268069.jpg">
+<div class="card-content"><h3>Santiago Bernabéu</h3><p>Madrid</p></div>
 </div>
 
-<!-- Anfield -->
 <div class="card" data-title="Anfield"
-data-info="Liverpool | 61.000 | Liverpool FC | 1884 | You'll Never Walk Alone">
+data-info="Liverpool | 1884 | Famoso por el milagro de 2005 y la remontada histórica ante el Barça en 2019 (4-0).">
 <img src="https://pbs.twimg.com/media/GgO7LAZWkAAUi5p.jpg">
-<div class="card-content">
-<h3>Anfield</h3>
-<p>Liverpool, Inglaterra</p>
-</div>
+<div class="card-content"><h3>Anfield</h3><p>Liverpool</p></div>
 </div>
 
-<!-- Stamford Bridge -->
 <div class="card" data-title="Stamford Bridge"
-data-info="Londres | 40.000 | Chelsea FC | 1877">
+data-info="Chelsea | 1877 | Aquí el Chelsea ganó su primera Champions League en 2012 tras eliminar al Barça.">
 <img src="https://www.redestelecom.es/wp-content/uploads/2017/07/52971_30.jpg">
-<div class="card-content">
-<h3>Stamford Bridge</h3>
-<p>Londres, Inglaterra</p>
-</div>
+<div class="card-content"><h3>Stamford Bridge</h3><p>Londres</p></div>
 </div>
 
-<!-- San Siro -->
 <div class="card" data-title="San Siro"
-data-info="Milán | 75.000 | AC Milan & Inter | 1926">
+data-info="Milán | 1926 | Escenario de finales de Champions y hogar de Maldini, Kaká y Ronaldo Nazario.">
 <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/20/7b/ac/curva-sud.jpg?w=900&h=500&s=1">
-<div class="card-content">
-<h3>San Siro</h3>
-<p>Milán, Italia</p>
-</div>
+<div class="card-content"><h3>San Siro</h3><p>Milán</p></div>
 </div>
 
-<!-- Johan Cruyff Arena -->
 <div class="card" data-title="Johan Cruyff Arena"
-data-info="Ámsterdam | 55.000 | Ajax | 1996">
+data-info="Ajax | 1996 | Cuna del fútbol total y del Ajax campeón de Europa en 1995.">
 <img src="https://johancruyffinstitute.com/wp-content/uploads/2021/04/Interior-del-estadio.jpg">
-<div class="card-content">
-<h3>Johan Cruyff Arena</h3>
-<p>Países Bajos</p>
-</div>
-</div>
-  
-<!-- Cartagonova -->
-<div class="card" data-title="Cartagonova"
-data-info="Cartagena | 15.000 | FC Cartagena">
-<img src="https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/JFL76SBN3NKKHOZ7CUK5LCADPE.jpg"
-<div class="card-content">
-<h3>Cartagonova</h3>
-<P>Cartagena, España</P>
-</div>
+<div class="card-content"><h3>Johan Cruyff Arena</h3><p>Ámsterdam</p></div>
 </div>
 
-<!-- Ángel Celdrán -->
 <div class="card" data-title="Ángel Celdrán"
-data-info="El llano Del Beal | La Minera">
-<img src="">
-<div class="card-content">
-<h3>Ángel Celdrán</h3>
-<p>Murcia, España</p>
-</div>
+data-info="Murcia | Estadio histórico de La Minera, símbolo del fútbol humilde español.">
+<img src="https://source.unsplash.com/800x600/?small,football,stadium">
+<div class="card-content"><h3>Ángel Celdrán</h3><p>Murcia</p></div>
 </div>
 
-<!-- Riazor -->
 <div class="card" data-title="Riazor"
-data-info="A Coruña | Deportivo | Junto al mar">
-<img src="">
-<div class="card-content">
-<h3>Riazor</h3>
-<p>A Coruña, España</p>
-</div>
+data-info="A Coruña | Aquí el Deportivo ganó la Liga 1999-2000 y vivió su época dorada europea.">
+<img src="https://source.unsplash.com/800x600/?riazor,stadium">
+<div class="card-content"><h3>Riazor</h3><p>A Coruña</p></div>
 </div>
 
-<!-- Rosaleda -->
-<div class="card" data-title="La Rosadela"
-data-info="Málaga CF | 30.000 | Málaga">
-<img src="">
-<div class="card-content">
-<h3>La Rosaleda</h3>
-<p>Málaga, España</p>
-</div>
+<div class="card" data-title="La Rosaleda"
+data-info="Málaga | 1941 | Escenario del Málaga de Isco que alcanzó cuartos de Champions en 2013.">
+<img src="https://source.unsplash.com/800x600/?la,rosaleda,stadium">
+<div class="card-content"><h3>La Rosaleda</h3><p>Málaga</p></div>
 </div>
 
-<!-- ================= AMÉRICA ================= -->
+</div>
+
 <h2>América</h2>
 <div class="grid">
 
 <div class="card" data-title="Maracaná"
-data-info="Brasil | 78.000 | 1950 | Dos finales mundialistas">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Maracana_2022.jpg/1280px-Maracana_2022.jpg">
-<div class="card-content">
-<h3>Maracaná</h3>
-<p>Brasil</p>
-</div>
+data-info="Brasil | 1950 | Escenario del 'Maracanazo' y final del Mundial 2014.">
+<img src="https://source.unsplash.com/800x600/?maracana,stadium">
+<div class="card-content"><h3>Maracaná</h3><p>Brasil</p></div>
 </div>
 
 <div class="card" data-title="La Bombonera"
-data-info="Argentina | Boca Juniors | Ambiente único">
+data-info="Argentina | Fortaleza de Boca Juniors y escenario de noches mágicas de Libertadores.">
 <img src="https://source.unsplash.com/800x600/?bombonera,stadium">
-<div class="card-content">
-<h3>La Bombonera</h3>
-<p>Argentina</p>
-</div>
+<div class="card-content"><h3>La Bombonera</h3><p>Argentina</p></div>
 </div>
 
 <div class="card" data-title="Estadio Azteca"
-data-info="México | 87.000 | Dos finales de Mundial">
+data-info="México | Único estadio con dos finales del Mundial (1970 y 1986), donde Maradona hizo historia.">
 <img src="https://source.unsplash.com/800x600/?azteca,stadium">
-<div class="card-content">
-<h3>Estadio Azteca</h3>
-<p>México</p>
-</div>
-</div>
-
-<div class="card" data-title="Monumental"
-data-info="Argentina | 84.000 | River Plate">
-<img src="https://source.unsplash.com/800x600/?river,plate,stadium">
-<div class="card-content">
-<h3>Monumental</h3>
-<p>Argentina</p>
-</div>
-</div>
-
-<div class="card" data-title="SoFi Stadium"
-data-info="EEUU | 70.000 | 2020 | Estadio ultramoderno">
-<img src="https://source.unsplash.com/800x600/?sofi,stadium">
-<div class="card-content">
-<h3>SoFi Stadium</h3>
-<p>Estados Unidos</p>
-</div>
+<div class="card-content"><h3>Estadio Azteca</h3><p>México</p></div>
 </div>
 
 </div>
 
-<!-- ================= ASIA ================= -->
 <h2>Asia</h2>
 <div class="grid">
 
 <div class="card" data-title="Lusail Stadium"
-data-info="Catar | 88.966 | Final Mundial 2022">
+data-info="Catar | Sede de la final del Mundial 2022, donde Messi levantó su Copa del Mundo.">
 <img src="https://source.unsplash.com/800x600/?lusail,stadium">
-<div class="card-content">
-<h3>Lusail Stadium</h3>
-<p>Catar</p>
-</div>
+<div class="card-content"><h3>Lusail Stadium</h3><p>Catar</p></div>
 </div>
 
 <div class="card" data-title="Salt Lake Stadium"
-data-info="India | 85.000 | Uno de los más grandes del mundo">
+data-info="India | Uno de los estadios más grandes del mundo y sede de finales continentales asiáticas.">
 <img src="https://source.unsplash.com/800x600/?salt,lake,stadium">
-<div class="card-content">
-<h3>Salt Lake Stadium</h3>
-<p>India</p>
-</div>
-</div>
-
-<div class="card" data-title="Bukit Jalil"
-data-info="Malasia | 87.000 | 1998">
-<img src="https://source.unsplash.com/800x600/?bukit,jalil,stadium">
-<div class="card-content">
-<h3>Bukit Jalil</h3>
-<p>Malasia</p>
-</div>
-</div>
-
-<div class="card" data-title="Gelora Bung Karno"
-data-info="Indonesia | 77.000 | 1962">
-<img src="https://source.unsplash.com/800x600/?gelora,bung,karno,stadium">
-<div class="card-content">
-<h3>Gelora Bung Karno</h3>
-<p>Indonesia</p>
-</div>
+<div class="card-content"><h3>Salt Lake Stadium</h3><p>India</p></div>
 </div>
 
 </div>
 
-<!-- ================= ÁFRICA ================= -->
 <h2>África</h2>
 <div class="grid">
 
 <div class="card" data-title="Soccer City"
-data-info="Sudáfrica | 94.700 | Final Mundial 2010">
+data-info="Sudáfrica | Final del Mundial 2010, donde España fue campeona del mundo.">
 <img src="https://source.unsplash.com/800x600/?soccer,city,stadium">
-<div class="card-content">
-<h3>Soccer City</h3>
-<p>Sudáfrica</p>
-</div>
+<div class="card-content"><h3>Soccer City</h3><p>Sudáfrica</p></div>
 </div>
 
-<div class="card" data-title="Cairo International Stadium"
-data-info="Egipto | 75.000 | 1960">
+<div class="card" data-title="Cairo International"
+data-info="Egipto | Hogar de Al Ahly, el club más laureado de África.">
 <img src="https://source.unsplash.com/800x600/?cairo,stadium">
-<div class="card-content">
-<h3>Cairo International</h3>
-<p>Egipto</p>
-</div>
-</div>
-
-<div class="card" data-title="Stade Mohammed V"
-data-info="Marruecos | 67.000">
-<img src="https://source.unsplash.com/800x600/?mohammed,v,stadium">
-<div class="card-content">
-<h3>Stade Mohammed V</h3>
-<p>Marruecos</p>
-</div>
-</div>
-
-<div class="card" data-title="Borg El Arab"
-data-info="Egipto | 86.000 | 2009">
-<img src="https://source.unsplash.com/800x600/?borg,el,arab,stadium">
-<div class="card-content">
-<h3>Borg El Arab</h3>
-<p>Egipto</p>
-</div>
+<div class="card-content"><h3>Cairo International</h3><p>Egipto</p></div>
 </div>
 
 </div>
