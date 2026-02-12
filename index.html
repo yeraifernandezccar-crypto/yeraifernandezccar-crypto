@@ -6,7 +6,6 @@
 <title>Los Mejores Estadios del Mundo</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -15,17 +14,16 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#0a0a0a;
+background:#0b0b0b;
 color:#fff;
 }
 
-/* HERO */
-
+/* HERO ORIGINAL */
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-url("https://images.unsplash.com/photo-1508098682722-e99c643e7f54?auto=format&fit=crop&w=1600&q=80")
+linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+url("https://images.unsplash.com/photo-1518091043644-c1d4457512c6")
 center/cover no-repeat;
 display:flex;
 align-items:center;
@@ -37,7 +35,6 @@ text-align:center;
 font-size:3.5rem;
 margin-bottom:20px;
 color:#e10600;
-animation:fadeInDown 1s ease;
 }
 
 .hero p{
@@ -60,28 +57,22 @@ background:#ff1a1a;
 transform:scale(1.05);
 }
 
-/* SECTION */
-
 section{
 padding:80px 8%;
 }
 
 h2{
-margin:50px 0 25px;
+margin:60px 0 25px;
 border-left:5px solid #e10600;
 padding-left:15px;
 font-size:2rem;
 }
 
-/* GRID */
-
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
-
-/* CARD */
 
 .card{
 background:#151515;
@@ -89,7 +80,7 @@ border-radius:15px;
 overflow:hidden;
 transition:0.4s;
 cursor:pointer;
-box-shadow:0 5px 15px rgba(0,0,0,0.4);
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
 }
 
 .card:hover{
@@ -113,11 +104,9 @@ margin-bottom:10px;
 }
 
 .card p{
-font-size:0.95rem;
 color:#ccc;
+font-size:0.9rem;
 }
-
-/* MODAL */
 
 .modal{
 display:none;
@@ -136,7 +125,6 @@ padding:30px;
 border-radius:15px;
 max-width:600px;
 width:100%;
-animation:fadeIn 0.4s ease;
 }
 
 .modal-content h2{
@@ -152,8 +140,6 @@ font-size:30px;
 cursor:pointer;
 }
 
-/* FOOTER */
-
 footer{
 text-align:center;
 padding:30px;
@@ -161,19 +147,6 @@ background:#000;
 margin-top:60px;
 color:#777;
 }
-
-/* ANIMATIONS */
-
-@keyframes fadeIn{
-from{opacity:0; transform:scale(0.8);}
-to{opacity:1; transform:scale(1);}
-}
-
-@keyframes fadeInDown{
-from{opacity:0; transform:translateY(-30px);}
-to{opacity:1; transform:translateY(0);}
-}
-
 </style>
 </head>
 
@@ -189,170 +162,201 @@ to{opacity:1; transform:translateY(0);}
 
 <section id="estadios">
 
-<!-- EUROPA -->
+<!-- ================= EUROPA ================= -->
 <h2>Europa</h2>
 <div class="grid">
 
-<div class="card" 
-data-title="Spotify Camp Nou"
-data-info="📍 Barcelona, España
-👥 Capacidad: 99.354
-🏟️ Club: FC Barcelona
-📅 Inauguración: 1957
-🔎 El estadio más grande de Europa. Actualmente en remodelación para convertirse en el más moderno del mundo.">
-<img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80">
+<!-- Camp Nou -->
+<div class="card" data-title="Spotify Camp Nou"
+data-info="Barcelona | 99.354 espectadores | FC Barcelona | 1957">
+<img src="https://source.unsplash.com/800x600/?camp,nou,stadium">
 <div class="card-content">
 <h3>Spotify Camp Nou</h3>
 <p>Barcelona, España</p>
 </div>
 </div>
 
-<div class="card"
-data-title="Santiago Bernabéu"
-data-info="📍 Madrid, España
-👥 Capacidad: 85.000+
-🏟️ Club: Real Madrid
-📅 1947
-🔎 Remodelado con techo retráctil y césped hipertecnológico.">
-<img src="https://images.unsplash.com/photo-1603297631956-b2d7c0f1b44b?auto=format&fit=crop&w=800&q=80">
+<!-- Bernabeu -->
+<div class="card" data-title="Santiago Bernabéu"
+data-info="Madrid | 85.000 | Real Madrid | 1947 | Remodelación futurista">
+<img src="https://source.unsplash.com/800x600/?santiago,bernabeu,stadium">
 <div class="card-content">
 <h3>Santiago Bernabéu</h3>
 <p>Madrid, España</p>
 </div>
 </div>
 
-<div class="card"
-data-title="Allianz Arena"
-data-info="📍 Múnich, Alemania
-👥 75.000
-🏟️ Bayern Múnich
-📅 2005
-🔎 Famoso por iluminarse de distintos colores.">
-<img src="https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?auto=format&fit=crop&w=800&q=80">
+<!-- Anfield -->
+<div class="card" data-title="Anfield"
+data-info="Liverpool | 61.000 | Liverpool FC | 1884 | You'll Never Walk Alone">
+<img src="https://source.unsplash.com/800x600/?anfield,stadium">
 <div class="card-content">
-<h3>Allianz Arena</h3>
-<p>Múnich, Alemania</p>
+<h3>Anfield</h3>
+<p>Liverpool, Inglaterra</p>
+</div>
+</div>
+
+<!-- Stamford Bridge -->
+<div class="card" data-title="Stamford Bridge"
+data-info="Londres | 40.000 | Chelsea FC | 1877">
+<img src="https://source.unsplash.com/800x600/?stamford,bridge,stadium">
+<div class="card-content">
+<h3>Stamford Bridge</h3>
+<p>Londres, Inglaterra</p>
+</div>
+</div>
+
+<!-- San Siro -->
+<div class="card" data-title="San Siro"
+data-info="Milán | 75.000 | AC Milan & Inter | 1926">
+<img src="https://source.unsplash.com/800x600/?san,siro,stadium">
+<div class="card-content">
+<h3>San Siro</h3>
+<p>Milán, Italia</p>
+</div>
+</div>
+
+<!-- Johan Cruyff Arena -->
+<div class="card" data-title="Johan Cruyff Arena"
+data-info="Ámsterdam | 55.000 | Ajax | 1996">
+<img src="https://source.unsplash.com/800x600/?johan,cruyff,arena">
+<div class="card-content">
+<h3>Johan Cruyff Arena</h3>
+<p>Países Bajos</p>
 </div>
 </div>
 
 </div>
 
-<!-- AMÉRICA -->
+<!-- ================= AMÉRICA ================= -->
 <h2>América</h2>
 <div class="grid">
 
-<div class="card"
-data-title="Maracaná"
-data-info="📍 Río de Janeiro, Brasil
-👥 78.000
-📅 1950
-🔎 Escenario de dos finales del Mundial.">
-<img src="https://images.unsplash.com/photo-1521417531039-70e9149a6f03?auto=format&fit=crop&w=800&q=80">
+<div class="card" data-title="Maracaná"
+data-info="Brasil | 78.000 | 1950 | Dos finales mundialistas">
+<img src="https://source.unsplash.com/800x600/?maracana,stadium">
 <div class="card-content">
 <h3>Maracaná</h3>
 <p>Brasil</p>
 </div>
 </div>
 
-<div class="card"
-data-title="Estadio Azteca"
-data-info="📍 Ciudad de México
-👥 87.000
-📅 1966
-🔎 Único estadio con dos finales mundialistas.">
-<img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80">
+<div class="card" data-title="La Bombonera"
+data-info="Argentina | Boca Juniors | Ambiente único">
+<img src="https://source.unsplash.com/800x600/?bombonera,stadium">
+<div class="card-content">
+<h3>La Bombonera</h3>
+<p>Argentina</p>
+</div>
+</div>
+
+<div class="card" data-title="Estadio Azteca"
+data-info="México | 87.000 | Dos finales de Mundial">
+<img src="https://source.unsplash.com/800x600/?azteca,stadium">
 <div class="card-content">
 <h3>Estadio Azteca</h3>
 <p>México</p>
 </div>
 </div>
 
-<div class="card"
-data-title="MetLife Stadium"
-data-info="📍 Nueva York, EEUU
-👥 82.500
-📅 2010
-🔎 Sede de la final del Mundial 2026.">
-<img src="https://images.unsplash.com/photo-1505842465776-3d90f616310f?auto=format&fit=crop&w=800&q=80">
+<div class="card" data-title="Monumental"
+data-info="Argentina | 84.000 | River Plate">
+<img src="https://source.unsplash.com/800x600/?river,plate,stadium">
 <div class="card-content">
-<h3>MetLife Stadium</h3>
-<p>EEUU</p>
+<h3>Monumental</h3>
+<p>Argentina</p>
+</div>
+</div>
+
+<div class="card" data-title="SoFi Stadium"
+data-info="EEUU | 70.000 | 2020 | Estadio ultramoderno">
+<img src="https://source.unsplash.com/800x600/?sofi,stadium">
+<div class="card-content">
+<h3>SoFi Stadium</h3>
+<p>Estados Unidos</p>
 </div>
 </div>
 
 </div>
 
-<!-- ASIA -->
+<!-- ================= ASIA ================= -->
 <h2>Asia</h2>
 <div class="grid">
 
-<div class="card"
-data-title="Lusail Stadium"
-data-info="📍 Catar
-👥 88.966
-📅 2022
-🔎 Sede de la final del Mundial 2022.">
-<img src="https://images.unsplash.com/photo-1667848960208-8fd6b8f88b53?auto=format&fit=crop&w=800&q=80">
+<div class="card" data-title="Lusail Stadium"
+data-info="Catar | 88.966 | Final Mundial 2022">
+<img src="https://source.unsplash.com/800x600/?lusail,stadium">
 <div class="card-content">
 <h3>Lusail Stadium</h3>
 <p>Catar</p>
 </div>
 </div>
 
-<div class="card"
-data-title="Saitama Stadium"
-data-info="📍 Japón
-👥 63.700
-📅 2001
-🔎 Uno de los mejores ambientes de Asia.">
-<img src="https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?auto=format&fit=crop&w=800&q=80">
+<div class="card" data-title="Salt Lake Stadium"
+data-info="India | 85.000 | Uno de los más grandes del mundo">
+<img src="https://source.unsplash.com/800x600/?salt,lake,stadium">
 <div class="card-content">
-<h3>Saitama Stadium</h3>
-<p>Japón</p>
+<h3>Salt Lake Stadium</h3>
+<p>India</p>
 </div>
 </div>
 
-<div class="card"
-data-title="King Fahd Stadium"
-data-info="📍 Arabia Saudí
-👥 68.000
-📅 1987
-🔎 Conocido por su enorme cubierta tipo tienda.">
-<img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=800&q=80">
+<div class="card" data-title="Bukit Jalil"
+data-info="Malasia | 87.000 | 1998">
+<img src="https://source.unsplash.com/800x600/?bukit,jalil,stadium">
 <div class="card-content">
-<h3>King Fahd Stadium</h3>
-<p>Arabia Saudí</p>
+<h3>Bukit Jalil</h3>
+<p>Malasia</p>
+</div>
+</div>
+
+<div class="card" data-title="Gelora Bung Karno"
+data-info="Indonesia | 77.000 | 1962">
+<img src="https://source.unsplash.com/800x600/?gelora,bung,karno,stadium">
+<div class="card-content">
+<h3>Gelora Bung Karno</h3>
+<p>Indonesia</p>
 </div>
 </div>
 
 </div>
 
-<!-- ÁFRICA -->
+<!-- ================= ÁFRICA ================= -->
 <h2>África</h2>
 <div class="grid">
 
-<div class="card"
-data-title="Soccer City"
-data-info="📍 Sudáfrica
-👥 94.700
-📅 1989
-🔎 Final del Mundial 2010.">
-<img src="https://images.unsplash.com/photo-1589187155475-7e8d6a5c2f4b?auto=format&fit=crop&w=800&q=80">
+<div class="card" data-title="Soccer City"
+data-info="Sudáfrica | 94.700 | Final Mundial 2010">
+<img src="https://source.unsplash.com/800x600/?soccer,city,stadium">
 <div class="card-content">
 <h3>Soccer City</h3>
 <p>Sudáfrica</p>
 </div>
 </div>
 
-<div class="card"
-data-title="Cairo International Stadium"
-data-info="📍 Egipto
-👥 75.000
-📅 1960
-🔎 Uno de los estadios más importantes de África.">
-<img src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?auto=format&fit=crop&w=800&q=80">
+<div class="card" data-title="Cairo International Stadium"
+data-info="Egipto | 75.000 | 1960">
+<img src="https://source.unsplash.com/800x600/?cairo,stadium">
 <div class="card-content">
 <h3>Cairo International</h3>
+<p>Egipto</p>
+</div>
+</div>
+
+<div class="card" data-title="Stade Mohammed V"
+data-info="Marruecos | 67.000">
+<img src="https://source.unsplash.com/800x600/?mohammed,v,stadium">
+<div class="card-content">
+<h3>Stade Mohammed V</h3>
+<p>Marruecos</p>
+</div>
+</div>
+
+<div class="card" data-title="Borg El Arab"
+data-info="Egipto | 86.000 | 2009">
+<img src="https://source.unsplash.com/800x600/?borg,el,arab,stadium">
+<div class="card-content">
+<h3>Borg El Arab</h3>
 <p>Egipto</p>
 </div>
 </div>
@@ -370,7 +374,7 @@ data-info="📍 Egipto
 </div>
 
 <footer>
-© 2026 | Web premium de estadios
+© 2026 | Web de estadios de fútbol
 </footer>
 
 <script>
