@@ -1,236 +1,239 @@
-
 <!DOCTYPE html>
 <html lang="es">
-    <style>
-        
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los Mejores Estadios del Mundo</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
-    background: #0b0b0b;
-    color: #fff;
+body{
+background:#0a0a0a;
+color:#fff;
 }
 
 /* HERO */
-.hero {
-    height: 100vh;
-    background:
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-        url("https://images.unsplash.com/photo-1518091043644-c1d4457512c6")
-        center / cover no-repeat;
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+url("https://images.unsplash.com/photo-1508098682722-e99c643e7f54?auto=format&fit=crop&w=1600&q=80")
+center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
-.overlay {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.hero h1{
+font-size:3.5rem;
+margin-bottom:20px;
+color:#e10600;
+animation:fadeInDown 1s ease;
 }
 
-.overlay h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    animation: slideDown 1s ease;
+.hero p{
+font-size:1.3rem;
+margin-bottom:30px;
 }
 
-.overlay p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+.btn{
+padding:15px 30px;
+background:#e10600;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+transition:0.3s;
 }
 
-.btn {
-    padding: 15px 30px;
-    background: #e10600;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+.btn:hover{
+background:#ff1a1a;
+transform:scale(1.05);
 }
 
-/* NAV */
-.navbar {
-    background: #111;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.5rem;
+/* SECTION */
+
+section{
+padding:80px 8%;
 }
 
-/* STADIUMS */
-.stadiums {
-    padding: 60px 10%;
+h2{
+margin:50px 0 25px;
+border-left:5px solid #e10600;
+padding-left:15px;
+font-size:2rem;
 }
 
-.stadiums h2 {
-    margin: 40px 0 20px;
-    border-left: 5px solid #e10600;
-    padding-left: 10px;
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* CARD */
+
+.card{
+background:#151515;
+border-radius:15px;
+overflow:hidden;
+transition:0.4s;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
 }
 
-.card {
-    background: #151515;
-    padding: 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(225,6,0,0.4);
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(225,6,0,0.4);
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
 }
 
-.card h3 {
-    color: #e10600;
-    margin-bottom: 10px;
+.card-content{
+padding:20px;
+}
+
+.card h3{
+color:#e10600;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:0.95rem;
+color:#ccc;
 }
 
 /* MODAL */
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.85);
+justify-content:center;
+align-items:center;
+z-index:1000;
+padding:20px;
 }
 
-.modal-content {
-    background: #111;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 90%;
-    animation: fadeIn 0.3s ease;
+.modal-content{
+background:#111;
+padding:30px;
+border-radius:15px;
+max-width:600px;
+width:100%;
+animation:fadeIn 0.4s ease;
 }
 
-.modal-content h2 {
-    color: #e10600;
-    margin-bottom: 15px;
+.modal-content h2{
+color:#e10600;
+margin-bottom:15px;
 }
 
-.close {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    font-size: 28px;
-    cursor: pointer;
+.close{
+position:absolute;
+right:30px;
+top:20px;
+font-size:30px;
+cursor:pointer;
 }
 
 /* FOOTER */
-footer {
-    background: #000;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+
+footer{
+text-align:center;
+padding:30px;
+background:#000;
+margin-top:60px;
+color:#777;
 }
 
 /* ANIMATIONS */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
+
+@keyframes fadeIn{
+from{opacity:0; transform:scale(0.8);}
+to{opacity:1; transform:scale(1);}
 }
 
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes fadeInDown{
+from{opacity:0; transform:translateY(-30px);}
+to{opacity:1; transform:translateY(0);}
 }
 
-    </style>
-<head>
-    <meta charset="UTF-8">
-    <title>Los Mejores Estadios del Mundo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+</style>
 </head>
+
 <body>
 
-<!-- HERO -->
 <header class="hero">
-    <div class="overlay">
-        <h1>Los Mejores Estadios del Mundo</h1>
-        <p>Los templos más impresionantes del fútbol mundial</p>
-        <a href="#estadios" class="btn">Explorar Estadios</a>
-    </div>
+<div>
+<h1>Los Mejores Estadios del Mundo</h1>
+<p>Los templos más impresionantes del fútbol mundial</p>
+<a href="#estadios" class="btn">Explorar</a>
+</div>
 </header>
 
-<!-- NAV -->
-<nav class="navbar">
-    <h2>Estadios de fútbol</h2>
-</nav>
-
-<!-- STADIUMS -->
-<section id="estadios" class="stadiums">
+<section id="estadios">
 
 <!-- EUROPA -->
 <h2>Europa</h2>
 <div class="grid">
 
-<div class="card" data-title="Spotify Camp Nou"
-data-info="Estadio del FC Barcelona. Capacidad superior a 99.000 espectadores. Inaugurado en 1957.">
+<div class="card" 
+data-title="Spotify Camp Nou"
+data-info="📍 Barcelona, España
+👥 Capacidad: 99.354
+🏟️ Club: FC Barcelona
+📅 Inauguración: 1957
+🔎 El estadio más grande de Europa. Actualmente en remodelación para convertirse en el más moderno del mundo.">
+<img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Spotify Camp Nou</h3>
+<p>Barcelona, España</p>
+</div>
+</div>
 
-<h3>Spotify Camp Nou</h3><p>Barcelona, España</p></div>
+<div class="card"
+data-title="Santiago Bernabéu"
+data-info="📍 Madrid, España
+👥 Capacidad: 85.000+
+🏟️ Club: Real Madrid
+📅 1947
+🔎 Remodelado con techo retráctil y césped hipertecnológico.">
+<img src="https://images.unsplash.com/photo-1603297631956-b2d7c0f1b44b?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Santiago Bernabéu</h3>
+<p>Madrid, España</p>
+</div>
+</div>
 
-<div class="card" data-title="Santiago Bernabéu"
-data-info="Estadio del Real Madrid. Remodelado con tecnología avanzada y techo retráctil.">
-<h3>Santiago Bernabéu</h3><p>Madrid, España</p></div>
-
-
-<div class="card" data-title="Cartagonova"
-data-info="Estadio del FC Cartagena. Capacidad aproximada de 15.000 espectadores.">
-<h3>Cartagonova</h3><p>Cartagena, España</p></div>
-
-<div class="card" data-title="Ángel Celdrán"
-data-info="Estadio de La Minera. Histórico del fútbol murciano,equipo que el año pasado se enfrentó al Madrid.">
-<h3>Ángel Celdrán</h3><p>El llano Del Beal, España</p></div>
-
-<div class="card" data-title="Riazor"
-data-info="Estadio del Deportivo de La Coruña. Situado junto al mar.">
-<h3>Riazor</h3><p>A Coruña, España</p></div>
-
-<div class="card" data-title="Allianz Arena"
-data-info="Estadio del Bayern de Múnich. Famoso por su fachada iluminada.">
-<h3>Allianz Arena</h3><p>Múnich, Alemania</p></div>
-
-<div class="card" data-title="Parc des Princes"
-data-info="Estadio del PSG. Capacidad para más de 47.000 espectadores.">
-<h3>Parc des Princes</h3><p>París, Francia</p></div>
-
-<div class="card" data-title="San Siro"
-data-info="Estadio compartido por AC Milan e Inter. Inaugurado en 1926.">
-<h3>San Siro</h3><p>Milán, Italia</p></div>
-
-<div class="card" data-title="Allianz Stadium"
-data-info="Estadio de la Juventus. Inaugurado en 2011.">
-<h3>Allianz Stadium</h3><p>Turín, Italia</p></div>
-
-<div class="card" data-title="Johan Cruyff Arena"
-data-info="Estadio del Ajax. Techo retráctil y gran tradición europea.">
-<h3>Johan Cruyff Arena</h3><p>Ámsterdam, Países Bajos</p></div>
-
-<div class="card" data-title="Anfield"
-data-info="Estadio del Liverpool FC. Famoso por el ambiente de 'You’ll Never Walk Alone'.">
-<h3>Anfield</h3><p>Liverpool, Inglaterra</p></div>
-
-<div class="card" data-title="Stamford Bridge"
-data-info="Estadio del Chelsea FC, situado en Londres.">
-<h3>Stamford Bridge</h3><p>Londres, Inglaterra</p></div>
-
-<div class="card" data-title="Old Trafford"
-data-info="Estadio del Manchester United, conocido como 'El Teatro de los Sueños'.">
-<h3>Old Trafford</h3><p>Mánchester, Inglaterra</p></div>
+<div class="card"
+data-title="Allianz Arena"
+data-info="📍 Múnich, Alemania
+👥 75.000
+🏟️ Bayern Múnich
+📅 2005
+🔎 Famoso por iluminarse de distintos colores.">
+<img src="https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Allianz Arena</h3>
+<p>Múnich, Alemania</p>
+</div>
+</div>
 
 </div>
 
@@ -238,25 +241,44 @@ data-info="Estadio del Manchester United, conocido como 'El Teatro de los Sueño
 <h2>América</h2>
 <div class="grid">
 
-<div class="card" data-title="Maracaná"
-data-info="Uno de los estadios más legendarios del mundo.">
-<h3>Maracaná</h3><p>Río de Janeiro, Brasil</p></div>
+<div class="card"
+data-title="Maracaná"
+data-info="📍 Río de Janeiro, Brasil
+👥 78.000
+📅 1950
+🔎 Escenario de dos finales del Mundial.">
+<img src="https://images.unsplash.com/photo-1521417531039-70e9149a6f03?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Maracaná</h3>
+<p>Brasil</p>
+</div>
+</div>
 
-<div class="card" data-title="Monumental"
-data-info="Estadio de River Plate. El más grande de Argentina.">
-<h3>Monumental</h3><p>Buenos Aires, Argentina</p></div>
+<div class="card"
+data-title="Estadio Azteca"
+data-info="📍 Ciudad de México
+👥 87.000
+📅 1966
+🔎 Único estadio con dos finales mundialistas.">
+<img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Estadio Azteca</h3>
+<p>México</p>
+</div>
+</div>
 
-<div class="card" data-title="La Bombonera"
-data-info="Estadio de Boca Juniors. Ambiente único.">
-<h3>La Bombonera</h3><p>Buenos Aires, Argentina</p></div>
-
-<div class="card" data-title="Vila Belmiro"
-data-info="Estadio del Santos FC. Donde Pelé hizo historia.">
-<h3>Vila Belmiro</h3><p>Santos, Brasil</p></div>
-
-<div class="card" data-title="Estadio Azteca"
-data-info="Único estadio que ha albergado dos finales de Copa del Mundo.">
-<h3>Estadio Azteca</h3><p>Ciudad de México, México</p></div>
+<div class="card"
+data-title="MetLife Stadium"
+data-info="📍 Nueva York, EEUU
+👥 82.500
+📅 2010
+🔎 Sede de la final del Mundial 2026.">
+<img src="https://images.unsplash.com/photo-1505842465776-3d90f616310f?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>MetLife Stadium</h3>
+<p>EEUU</p>
+</div>
+</div>
 
 </div>
 
@@ -264,17 +286,44 @@ data-info="Único estadio que ha albergado dos finales de Copa del Mundo.">
 <h2>Asia</h2>
 <div class="grid">
 
-<div class="card" data-title="Saitama Stadium"
-data-info="Principal estadio de fútbol de Japón. Gran ambiente.">
-<h3>Saitama Stadium</h3><p>Saitama, Japón</p></div>
+<div class="card"
+data-title="Lusail Stadium"
+data-info="📍 Catar
+👥 88.966
+📅 2022
+🔎 Sede de la final del Mundial 2022.">
+<img src="https://images.unsplash.com/photo-1667848960208-8fd6b8f88b53?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Lusail Stadium</h3>
+<p>Catar</p>
+</div>
+</div>
 
-<div class="card" data-title="Al Janoub Stadium"
-data-info="Estadio del Mundial Catar 2022 con diseño futurista.">
-<h3>Al Janoub Stadium</h3><p>Al Wakrah, Catar</p></div>
+<div class="card"
+data-title="Saitama Stadium"
+data-info="📍 Japón
+👥 63.700
+📅 2001
+🔎 Uno de los mejores ambientes de Asia.">
+<img src="https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Saitama Stadium</h3>
+<p>Japón</p>
+</div>
+</div>
 
-<div class="card" data-title="Seoul World Cup Stadium"
-data-info="Sede del Mundial 2002.">
-<h3>Seoul World Cup Stadium</h3><p>Seúl, Corea del Sur</p></div>
+<div class="card"
+data-title="King Fahd Stadium"
+data-info="📍 Arabia Saudí
+👥 68.000
+📅 1987
+🔎 Conocido por su enorme cubierta tipo tienda.">
+<img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>King Fahd Stadium</h3>
+<p>Arabia Saudí</p>
+</div>
+</div>
 
 </div>
 
@@ -282,56 +331,67 @@ data-info="Sede del Mundial 2002.">
 <h2>África</h2>
 <div class="grid">
 
-<div class="card" data-title="Soccer City"
-data-info="El estadio más grande de África. Final del Mundial 2010.">
-<h3>Soccer City</h3><p>Johannesburgo, Sudáfrica</p></div>
+<div class="card"
+data-title="Soccer City"
+data-info="📍 Sudáfrica
+👥 94.700
+📅 1989
+🔎 Final del Mundial 2010.">
+<img src="https://images.unsplash.com/photo-1589187155475-7e8d6a5c2f4b?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Soccer City</h3>
+<p>Sudáfrica</p>
+</div>
+</div>
 
-<div class="card" data-title="Stade 5 Juillet"
-data-info="Estadio emblemático de Argelia.">
-<h3>Stade 5 Juillet</h3><p>Argel, Argelia</p></div>
-
-<div class="card" data-title="Cairo International Stadium"
-data-info="Principal estadio de Egipto y del fútbol africano.">
-<h3>Cairo International Stadium</h3><p>El Cairo, Egipto</p></div>
-
-<div class="card" data-title="Stade Mohamed V"
-data-info="Estadio histórico de Marruecos con gran ambiente.">
-<h3>Stade Mohamed V</h3><p>Casablanca, Marruecos</p></div>
+<div class="card"
+data-title="Cairo International Stadium"
+data-info="📍 Egipto
+👥 75.000
+📅 1960
+🔎 Uno de los estadios más importantes de África.">
+<img src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Cairo International</h3>
+<p>Egipto</p>
+</div>
+</div>
 
 </div>
 
 </section>
 
-<!-- MODAL -->
 <div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modal-title"></h2>
-        <p id="modal-text"></p>
-    </div>
+<div class="modal-content">
+<span class="close">&times;</span>
+<h2 id="modal-title"></h2>
+<p id="modal-text"></p>
+</div>
 </div>
 
 <footer>
-    <p>© 2026 | Web de estadios de fútbol</p>
+© 2026 | Web premium de estadios
 </footer>
 
 <script>
-const cards = document.querySelectorAll(".card");
-const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modal-title");
-const modalText = document.getElementById("modal-text");
-const closeBtn = document.querySelector(".close");
+const cards=document.querySelectorAll(".card");
+const modal=document.getElementById("modal");
+const modalTitle=document.getElementById("modal-title");
+const modalText=document.getElementById("modal-text");
+const closeBtn=document.querySelector(".close");
 
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-        modalTitle.innerText = card.dataset.title;
-        modalText.innerText = card.dataset.info;
-        modal.style.display = "flex";
-    });
+cards.forEach(card=>{
+card.addEventListener("click",()=>{
+modalTitle.innerText=card.dataset.title;
+modalText.innerText=card.dataset.info;
+modal.style.display="flex";
+});
 });
 
-closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+closeBtn.onclick=()=>modal.style.display="none";
+window.onclick=e=>{
+if(e.target===modal) modal.style.display="none";
+};
 </script>
 
 </body>
